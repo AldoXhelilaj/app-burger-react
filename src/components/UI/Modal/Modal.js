@@ -5,7 +5,8 @@ import Backdrop from '../Backdrop/Backdrop';
 class modal extends Component {
 
     shouldComponentUpdate(nextProps, nextState){
-     return nextProps.toggle !== this.props.toggle //update only if props.toggle changes , this prevents OrderSummary to rerender
+     return nextProps.toggle !== this.props.toggle
+      || nextProps.children !== this.props.children//update only if props.toggle changes , this prevents OrderSummary to rerender
     
     }
     componentWillUpdate(){
